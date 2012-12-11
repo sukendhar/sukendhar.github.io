@@ -1,0 +1,5 @@
+safe: true
+source: sukendhar.github.com
+#destination: <the build dir>
+lsi: false
+pygments: true
