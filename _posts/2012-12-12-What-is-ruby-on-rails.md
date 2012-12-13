@@ -14,7 +14,6 @@ What’s special about that? There are dozens of frameworks out there and most
 The rest of the answer is in two of Rails guiding principles: less software and convention over configuration. Less software means you write fewer lines of code to implement your application. Keeping your code small means faster development and fewer bugs, which makes your code easier to understand, maintain, and enhance. Very shortly, you will see how Rails cuts your code burden. Convention over configuration means an end to verbose XML configuration files there aren’t any in Rails! Instead of configuration files, a Rails application uses a few simple programming conventions that allow it to figure out everything through reflection and discovery. Your application code and your running database already contain everything that Rails needs to know!
 
 <div>
-<h2 id='comment_heading'>Comments</h2>
 <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 </div>
