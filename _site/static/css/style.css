@@ -68,4 +68,7 @@ a.social.gplus:hover {
 .my_desc{
 	margin-left:30px;
 }
-	
+
+.main_container{
+	background: url(/static/images/background_2.jpg) !important;
+}	
