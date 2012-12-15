@@ -4,7 +4,7 @@
  <title>Sukendhar</title>
  <link href="http://sukendhar.github.com/atom.xml" rel="self"/>
  <link href="http://sukendhar.github.com/"/>
- <updated>2012-12-15T02:21:38+05:30</updated>
+ <updated>2012-12-16T00:42:46+05:30</updated>
  <id>http://sukendhar.github.com</id>
  <author>
    <name>Sukendhar</name>
@@ -17,10 +17,10 @@
    <link href="http://sukendhar.github.com/What-is-ruby-on-rails"/>
    <updated>2012-12-12T00:00:00+05:30</updated>
    <id>http:/sukendhar.github.com/What-is-ruby-on-rails</id>
-   <content type="html">&lt;p&gt;&lt;span class=&quot;gray&quot;&gt;What is Ruby :&lt;/span&gt;
+   <content type="html">&lt;p&gt;&lt;span class=&quot;sub_heading&quot;&gt;What is Ruby :&lt;/span&gt;
 Ruby is a pure object-oriented programming language with a super clean syntax that makes programming elegant and fun. Ruby successfully combines Smalltalkâs conceptual elegance, Pythons ease of use and learning, and Perls pragmatism. Ruby originated in Japan in the early 1990s, and has started to become popular worldwide in the past few years as more English language books and documentation have become available.&lt;/p&gt;
 
-&lt;p&gt;&lt;span class=&quot;gray&quot;&gt;What is Rails:&lt;/span&gt;
+&lt;p&gt;&lt;span class=&quot;sub_heading&quot;&gt;What is Rails:&lt;/span&gt;
 Rails is an open source Ruby framework for developing database-backed web applications.
 What’s special about that? There are dozens of frameworks out there and most of them have been around much longer than Rails. Why should you care about yet another framework? What would you think if I told you that you could develop a web application at least ten times faster with Rails than you could with a typical Java framework? You can without making any sacrifices in the quality of your application! How is this possible? Part of the answer is in the Ruby programming language. Many things that are very simple to do in Ruby are not even possible in most other languages. Rails takes full advantage of this.&lt;/p&gt;
 
@@ -36,6 +36,89 @@ What’s special about that? There are dozens of frameworks out there and most
 	// var disqus_developer = 1;
 	var disqus_identifier = 'http://sukendhar.github.com/What-is-ruby-on-rails';
 	var disqus_url = 'http://sukendhar.github.com/What-is-ruby-on-rails';
+	var disqus_script = 'embed.js';
+	(function () {
+	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+&lt;/script&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Getting started with git</title>
+   <link href="http://sukendhar.github.com/Getting-started-with-git"/>
+   <updated>2012-11-15T00:00:00+05:30</updated>
+   <id>http:/sukendhar.github.com/Getting-started-with-git</id>
+   <content type="html">&lt;p&gt;&lt;span class=&quot;sub_heading&quot;&gt;Global configuration file&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Git allows you to store global settings in the .gitconfig file. This file is located in the user home directory. Git stores the committer and author of a change in each commit.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;sub_heading&quot;&gt;User Configuration &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Configure your user and email for Git via the following command. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config --global user.name &quot;&lt;span class=&quot;no&quot;&gt;Your Name Here&lt;/span&gt;&quot;
+&lt;span class=&quot;c&quot;&gt;# Sets the default name for git to use when you commit&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config --global user.email &quot;&lt;span class=&quot;no&quot;&gt;your_email@youremail.com&lt;/span&gt;&quot;
+&lt;span class=&quot;c&quot;&gt;# Sets the default email for git to use when you commit&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;span class=&quot;sub_heading&quot;&gt;Getting started with Git&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Fire up a terminal, and type (replace Rails_app with name of the your application):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rails new Rails_app&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Afterwards, navigate into this new directory by typing:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cd Rails_app&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Initialize Git inside this directory by typing:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Create a new file by typing:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;touch README&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Add this file to the repository by typing:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add README&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, let’s make a change to this file, by writing something to it&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;echo &quot;Hello, is this on Github?!&quot; &amp;gt; README&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, we need to commit. Committing is a small message of what you just did:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit -m 'Initial commit'&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, we need to add the online Github repository (the origin)&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote add origin git@github.com:User/Rails_app.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And finally, let’s push it to Github.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now you’ve added your first file to Github! Continue to learn more about how to work with Git.&lt;/p&gt;
+
+&lt;h2 class=&quot;gray&quot;&gt;Comments&lt;/h2&gt;
+
+&lt;div&gt;
+&lt;div id=&quot;disqus_thread&quot; aria-live=&quot;polite&quot;&gt;&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+	var disqus_shortname = 'sukendhar';
+	// var disqus_developer = 1;
+	var disqus_identifier = 'http://sukendhar.github.com/Getting-started-with-git/';
+	var disqus_url = 'http://sukendhar.github.com/Getting-started-with-git/';
 	var disqus_script = 'embed.js';
 	(function () {
 	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

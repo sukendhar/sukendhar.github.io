@@ -31,12 +31,21 @@
   <body class="main_container">
     <div class="container">	
       <div id='mobile' class='two columns hidden'>
-        <ul>
-          <li><a href='/'>Sukendhar's blog</a></li>
-          <li><span class="gray">Sukendhar Reddy</span></li>
-          <li><a href="mailto:sukendhar555@gmail.com" onClick="_gaq.push(['_trackEvent', 'Link', 'Click', 'Mobile', 'Sidebar Email']);">sukendhar555@gmail.com</a></li>
-          <li><a href="http://twitter.com/sukendhar" onClick="_gaq.push(['_trackEvent', 'Link', 'Click', 'Mobile', Sidebar Email']);">@Sukendhar</a></li>
-        </ul>
+        <a id="avatar" href="/"></a>
+
+          <ul id="me">
+            <li><span class="my_name">Sukendhar Reddy</span></li>
+            <li class="gray my_desc">Ruby on Rails developer</li>
+          </ul>
+
+          <table id="buttons unstyled">
+            <td><a href="http://github.com/sukendhar" rel="me" class="social github" title="I share and fork code here" target="_blank"></a></td>
+            <td><a href="http://www.linkedin.com/in/sukendharreddy" rel="me" class="social linkedin" title="Go to LinkedIn profile" target="_blank"></a></td>
+            <td><a href="http://www.twitter.com/sukendhar" rel="me" class="social twitter" title="You should follow me" target="_blank"></a></td>
+            <td><a href="http://feeds.feedburner.com/sukendhar" rel="me" class="social rss" title="Go to feedburner sukendhar rss feed" target="_blank"></a></td>
+            <td><a href="https://plus.google.com/109867123691878848659/posts" rel="me" class="social gplus" title="Go to Google Plus profile" target="_blank"></a></td> 
+            <td><a href="mailto:sukendhar555@gmail.com?subject=hi" rel="me" class="social mail" title="Say hi" target="_blank"></a></td>
+          </table>
       </div>
 
       <div class="four columns sidebar">
@@ -74,10 +83,10 @@
   </div>
 
   <div class="ten columns" id="article-content">
-    <p><span class="gray">What is Ruby :</span>
+    <p><span class="sub_heading">What is Ruby :</span>
 Ruby is a pure object-oriented programming language with a super clean syntax that makes programming elegant and fun. Ruby successfully combines Smalltalkâs conceptual elegance, Pythons ease of use and learning, and Perls pragmatism. Ruby originated in Japan in the early 1990s, and has started to become popular worldwide in the past few years as more English language books and documentation have become available.</p>
 
-<p><span class="gray">What is Rails:</span>
+<p><span class="sub_heading">What is Rails:</span>
 Rails is an open source Ruby framework for developing database-backed web applications.
 What’s special about that? There are dozens of frameworks out there and most of them have been around much longer than Rails. Why should you care about yet another framework? What would you think if I told you that you could develop a web application at least ten times faster with Rails than you could with a typical Java framework? You can without making any sacrifices in the quality of your application! How is this possible? Part of the answer is in the Ruby programming language. Many things that are very simple to do in Ruby are not even possible in most other languages. Rails takes full advantage of this.</p>
 

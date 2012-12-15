@@ -31,12 +31,21 @@
   <body class="main_container">
     <div class="container">	
       <div id='mobile' class='two columns hidden'>
-        <ul>
-          <li><a href='/'>Sukendhar's blog</a></li>
-          <li><span class="gray">Sukendhar Reddy</span></li>
-          <li><a href="mailto:sukendhar555@gmail.com" onClick="_gaq.push(['_trackEvent', 'Link', 'Click', 'Mobile', 'Sidebar Email']);">sukendhar555@gmail.com</a></li>
-          <li><a href="http://twitter.com/sukendhar" onClick="_gaq.push(['_trackEvent', 'Link', 'Click', 'Mobile', Sidebar Email']);">@Sukendhar</a></li>
-        </ul>
+        <a id="avatar" href="/"></a>
+
+          <ul id="me">
+            <li><span class="my_name">Sukendhar Reddy</span></li>
+            <li class="gray my_desc">Ruby on Rails developer</li>
+          </ul>
+
+          <table id="buttons unstyled">
+            <td><a href="http://github.com/sukendhar" rel="me" class="social github" title="I share and fork code here" target="_blank"></a></td>
+            <td><a href="http://www.linkedin.com/in/sukendharreddy" rel="me" class="social linkedin" title="Go to LinkedIn profile" target="_blank"></a></td>
+            <td><a href="http://www.twitter.com/sukendhar" rel="me" class="social twitter" title="You should follow me" target="_blank"></a></td>
+            <td><a href="http://feeds.feedburner.com/sukendhar" rel="me" class="social rss" title="Go to feedburner sukendhar rss feed" target="_blank"></a></td>
+            <td><a href="https://plus.google.com/109867123691878848659/posts" rel="me" class="social gplus" title="Go to Google Plus profile" target="_blank"></a></td> 
+            <td><a href="mailto:sukendhar555@gmail.com?subject=hi" rel="me" class="social mail" title="Say hi" target="_blank"></a></td>
+          </table>
       </div>
 
       <div class="four columns sidebar">
@@ -65,6 +74,11 @@
     <li>
       <a class="nine columns" href="/What-is-ruby-on-rails">What is Ruby on Rails?</a>
       <span class="two columns">Dec 2012</span>
+    </li>
+  
+    <li>
+      <a class="nine columns" href="/Getting-started-with-git">Getting started with git</a>
+      <span class="two columns">Nov 2012</span>
     </li>
   
 </ul>
