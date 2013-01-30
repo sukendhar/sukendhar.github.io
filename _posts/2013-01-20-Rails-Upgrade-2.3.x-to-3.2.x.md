@@ -3,7 +3,11 @@ layout: post
 title: Rails upgrade 2.3.x to 3.2.x
 ---
 
-Install Rails Upgrade plugin $ ruby script/plugin install git://github.com/rails/rails_upgrade.git
+Install Rails Upgrade plugin 
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>ruby script/plugin install git://github.com/rails/rails_upgrade.git
+</code></pre>
+</div>
 
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake rails:upgrade:check
 </code></pre>
