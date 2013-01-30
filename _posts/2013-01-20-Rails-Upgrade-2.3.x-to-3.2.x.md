@@ -9,11 +9,12 @@ Install Rails Upgrade plugin
 </code></pre>
 </div>
 
+Then check for files list which we need to change
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake rails:upgrade:check
 </code></pre>
 </div>
 
-This should give you an idea of the manual changes that need to be done, but you'll probably want to upgrade some of those automatically.  The fastest way to do this is to run 'rails .', which will simply generate a new app on top of your existing code.  But this generation also has the effect of replacing some existing files, some of which you might not want to replace.  To back those up, first run:
+This should give you an idea of the manual changes that need to be done, but you'll probably want to upgrade some of those automatically.  The fastest way to do this is to run "rails ." , which will simply generate a new app on top of your existing code.  But this generation also has the effect of replacing some existing files, some of which you might not want to replace.  To back those up, first run:
  
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake rails:upgrade:backup
 </code></pre>
