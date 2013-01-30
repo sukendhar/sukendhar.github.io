@@ -43,3 +43,23 @@ This task will extract your config.gem calls and generate code you can put into 
 </div>
  
 Much of the configuration information that lived in environment.rb now belongs in a new file named config/application.rb; use the following task to generate code you can put into config/application.rb from your existing config/environment.rb
+
+<h2 class="gray">Comments</h2>
+
+<div>
+<div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+<script type="text/javascript">
+	var disqus_shortname = 'sukendhar';
+	// var disqus_developer = 1;
+	var disqus_identifier = 'http://sukendhar.github.com/Rails-Upgrade-2.3.x-to-3.2.x/';
+	var disqus_url = 'http://sukendhar.github.com/Rails-Upgrade-2.3.x-to-3.2.x/';
+	var disqus_script = 'embed.js';
+	(function () {
+	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+</script>
