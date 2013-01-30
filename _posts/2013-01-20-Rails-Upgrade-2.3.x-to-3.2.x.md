@@ -10,6 +10,7 @@ Install Rails Upgrade plugin
 </div>
 
 Then check for files list which we need to change
+
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake rails:upgrade:check
 </code></pre>
 </div>
