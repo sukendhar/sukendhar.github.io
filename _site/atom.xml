@@ -4,7 +4,7 @@
  <title>Sukendhar</title>
  <link href="http://sukendhar.github.com/atom.xml" rel="self"/>
  <link href="http://sukendhar.github.com/"/>
- <updated>2013-01-31T01:19:27+05:30</updated>
+ <updated>2013-02-24T16:26:55+05:30</updated>
  <id>http://sukendhar.github.com</id>
  <author>
    <name>Sukendhar</name>
@@ -17,13 +17,19 @@
    <link href="http://sukendhar.github.com/Rails-Upgrade-2.3.x-to-3.2.x"/>
    <updated>2013-01-20T00:00:00+05:30</updated>
    <id>http:/sukendhar.github.com/Rails-Upgrade-2.3.x-to-3.2.x</id>
-   <content type="html">&lt;p&gt;Install Rails Upgrade plugin $ ruby script/plugin install git://github.com/rails/rails_upgrade.git&lt;/p&gt;
+   <content type="html">&lt;p&gt;Install Rails Upgrade plugin &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ruby script/plugin install git://github.com/rails/rails_upgrade.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then check for files list which we need to change&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rake rails:upgrade:check
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;This should give you an idea of the manual changes that need to be done, but you’ll probably want to upgrade some of those automatically.  The fastest way to do this is to run ‘rails .’, which will simply generate a new app on top of your existing code.  But this generation also has the effect of replacing some existing files, some of which you might not want to replace.  To back those up, first run:&lt;/p&gt;
+&lt;p&gt;This should give you an idea of the manual changes that need to be done, but you’ll probably want to upgrade some of those automatically.  The fastest way to do this is to run “rails .” , which will simply generate a new app on top of your existing code.  But this generation also has the effect of replacing some existing files, some of which you might not want to replace.  To back those up, first run:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rake rails:upgrade:backup
 &lt;/code&gt;&lt;/pre&gt;
@@ -57,6 +63,27 @@
 &lt;/div&gt;
 
 &lt;p&gt;Much of the configuration information that lived in environment.rb now belongs in a new file named config/application.rb; use the following task to generate code you can put into config/application.rb from your existing config/environment.rb&lt;/p&gt;
+
+&lt;h2 class=&quot;gray&quot;&gt;Comments&lt;/h2&gt;
+
+&lt;div&gt;
+&lt;div id=&quot;disqus_thread&quot; aria-live=&quot;polite&quot;&gt;&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+	var disqus_shortname = 'sukendhar';
+	// var disqus_developer = 1;
+	var disqus_identifier = 'http://sukendhar.github.com/Rails-Upgrade-2.3.x-to-3.2.x/';
+	var disqus_url = 'http://sukendhar.github.com/Rails-Upgrade-2.3.x-to-3.2.x/';
+	var disqus_script = 'embed.js';
+	(function () {
+	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+&lt;/script&gt;
+
 </content>
  </entry>
  
