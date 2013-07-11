@@ -60,8 +60,8 @@ Much of the configuration information that lived in environment.rb now belongs i
 <script type="text/javascript">
 	var disqus_shortname = 'sukendhar';
 	// var disqus_developer = 1;
-	var disqus_identifier = 'http://sukendhar.github.com/Rails-Upgrade-2.3.x-to-3.2.x/';
-	var disqus_url = 'http://sukendhar.github.com/Rails-Upgrade-2.3.x-to-3.2.x/';
+	var disqus_identifier = 'http://sukendhar.github.io/Rails-Upgrade-2.3.x-to-3.2.x/';
+	var disqus_url = 'http://sukendhar.github.io/Rails-Upgrade-2.3.x-to-3.2.x/';
 	var disqus_script = 'embed.js';
 	(function () {
 	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

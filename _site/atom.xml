@@ -4,7 +4,7 @@
  <title>Sukendhar</title>
  <link href="http://sukendhar.github.com/atom.xml" rel="self"/>
  <link href="http://sukendhar.github.com/"/>
- <updated>2013-02-24T16:26:55+05:30</updated>
+ <updated>2013-07-12T00:06:42+05:30</updated>
  <id>http://sukendhar.github.com</id>
  <author>
    <name>Sukendhar</name>
@@ -74,8 +74,8 @@
 &lt;script type=&quot;text/javascript&quot;&gt;
 	var disqus_shortname = 'sukendhar';
 	// var disqus_developer = 1;
-	var disqus_identifier = 'http://sukendhar.github.com/Rails-Upgrade-2.3.x-to-3.2.x/';
-	var disqus_url = 'http://sukendhar.github.com/Rails-Upgrade-2.3.x-to-3.2.x/';
+	var disqus_identifier = 'http://sukendhar.github.io/Rails-Upgrade-2.3.x-to-3.2.x/';
+	var disqus_url = 'http://sukendhar.github.io/Rails-Upgrade-2.3.x-to-3.2.x/';
 	var disqus_script = 'embed.js';
 	(function () {
 	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -157,8 +157,8 @@
 &lt;script type=&quot;text/javascript&quot;&gt;
 	var disqus_shortname = 'sukendhar';
 	// var disqus_developer = 1;
-	var disqus_identifier = 'http://sukendhar.github.com/Getting-started-with-git/';
-	var disqus_url = 'http://sukendhar.github.com/Getting-started-with-git/';
+	var disqus_identifier = 'http://sukendhar.github.io/Getting-started-with-git/';
+	var disqus_url = 'http://sukendhar.github.io/Getting-started-with-git/';
 	var disqus_script = 'embed.js';
 	(function () {
 	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -184,6 +184,8 @@ What’s special about that? There are dozens of frameworks out there and most
 
 &lt;p&gt;The rest of the answer is in two of Rails guiding principles: less software and convention over configuration. Less software means you write fewer lines of code to implement your application. Keeping your code small means faster development and fewer bugs, which makes your code easier to understand, maintain, and enhance. Very shortly, you will see how Rails cuts your code burden. Convention over configuration means an end to verbose XML configuration files there aren’t any in Rails! Instead of configuration files, a Rails application uses a few simple programming conventions that allow it to figure out everything through reflection and discovery. Your application code and your running database already contain everything that Rails needs to know!&lt;/p&gt;
 
+&lt;h2 class=&quot;gray&quot;&gt;Comments&lt;/h2&gt;
+
 &lt;div&gt;
 &lt;div id=&quot;disqus_thread&quot; aria-live=&quot;polite&quot;&gt;&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
 &lt;/div&gt;
@@ -192,8 +194,8 @@ What’s special about that? There are dozens of frameworks out there and most
 &lt;script type=&quot;text/javascript&quot;&gt;
 	var disqus_shortname = 'sukendhar';
 	// var disqus_developer = 1;
-	var disqus_identifier = 'http://sukendhar.github.com/What-is-ruby-on-rails';
-	var disqus_url = 'http://sukendhar.github.com/What-is-ruby-on-rails';
+	var disqus_identifier = 'http://sukendhar.github.io/What-is-ruby-on-rails';
+	var disqus_url = 'http://sukendhar.github.io/What-is-ruby-on-rails';
 	var disqus_script = 'embed.js';
 	(function () {
 	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
