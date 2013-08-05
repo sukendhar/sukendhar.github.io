@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 ## MongoDB backup
@@ -8,4 +8,3 @@ To take backup of mongodb database
     
 To restore backup file to database
     $ mongorestore -db database_name folder_name
-
