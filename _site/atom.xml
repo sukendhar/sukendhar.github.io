@@ -4,7 +4,7 @@
  <title>Sukendhar</title>
  <link href="http://sukendhar.github.com/atom.xml" rel="self"/>
  <link href="http://sukendhar.github.com/"/>
- <updated>2013-07-12T00:06:42+05:30</updated>
+ <updated>2013-08-26T22:27:09+05:30</updated>
  <id>http://sukendhar.github.com</id>
  <author>
    <name>Sukendhar</name>
@@ -37,7 +37,7 @@
 
 &lt;p&gt;That will backup files you’ve probably edited that will be replaced in the upgrade; if you finish the upgrade and find that you don’t need the old copies, just delete them.  Otherwise, copy their contents back into the new files or run one of the following upgraders…&lt;/p&gt;
 
-&lt;h2&gt;Routes upgrader&lt;/h2&gt;
+&lt;h2 id=&quot;span-style-text-decoration-none-border-bottom1px-dashedstrongroutes-upgraderstrongspan&quot;&gt;&lt;span style=&quot;text-decoration: none; border-bottom:1px dashed;&quot;&gt;&lt;strong&gt;Routes upgrader&lt;/strong&gt;&lt;/span&gt;&lt;/h2&gt;
 
 &lt;p&gt;To generate a new routes file from your existing routes file, simply run the following Rake task:&lt;/p&gt;
 
@@ -47,7 +47,7 @@
 
 &lt;p&gt;This will output a new routes file that you can copy and paste or pipe into a new, Rails 3 compatible config/routes.rb.&lt;/p&gt;
 
-&lt;h2&gt;Gemfile generator&lt;/h2&gt;
+&lt;h2 id=&quot;span-style-text-decoration-none-border-bottom1px-dashedstronggemfile-generatorstrongspan&quot;&gt;&lt;span style=&quot;text-decoration: none; border-bottom:1px dashed;&quot;&gt;&lt;strong&gt;Gemfile generator&lt;/strong&gt;&lt;/span&gt;&lt;/h2&gt;
 
 &lt;p&gt;Creating a new Gemfile is as simple as running:&lt;/p&gt;
 
@@ -57,7 +57,7 @@
 
 &lt;p&gt;This task will extract your config.gem calls and generate code you can put into a bundler compatible Gemfile.&lt;/p&gt;
 
-&lt;h2&gt;Configuration generator&lt;/h2&gt;
+&lt;h2 id=&quot;span-style-text-decoration-none-border-bottom1px-dashedstrongconfiguration-generatorstrongspan&quot;&gt;&lt;span style=&quot;text-decoration: none; border-bottom:1px dashed;&quot;&gt;&lt;strong&gt;Configuration generator&lt;/strong&gt;&lt;/span&gt;&lt;/h2&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rake rails:upgrade:configuration&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -74,8 +74,8 @@
 &lt;script type=&quot;text/javascript&quot;&gt;
 	var disqus_shortname = 'sukendhar';
 	// var disqus_developer = 1;
-	var disqus_identifier = 'http://sukendhar.github.io/Rails-Upgrade-2.3.x-to-3.2.x/';
-	var disqus_url = 'http://sukendhar.github.io/Rails-Upgrade-2.3.x-to-3.2.x/';
+	var disqus_identifier = 'http://sukendharreddy.com/Rails-Upgrade-2.3.x-to-3.2.x/';
+	var disqus_url = 'http://sukendharreddy.com/Rails-Upgrade-2.3.x-to-3.2.x/';
 	var disqus_script = 'embed.js';
 	(function () {
 	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -157,8 +157,462 @@
 &lt;script type=&quot;text/javascript&quot;&gt;
 	var disqus_shortname = 'sukendhar';
 	// var disqus_developer = 1;
-	var disqus_identifier = 'http://sukendhar.github.io/Getting-started-with-git/';
-	var disqus_url = 'http://sukendhar.github.io/Getting-started-with-git/';
+	var disqus_identifier = 'http://sukendharreddy.com/Getting-started-with-git/';
+	var disqus_url = 'http://sukendharreddy.com/Getting-started-with-git/';
+	var disqus_script = 'embed.js';
+	(function () {
+	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+&lt;/script&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Mongo DB Quieries</title>
+   <link href="http://sukendhar.github.com/mongo-db-quieries"/>
+   <updated>2012-09-16T00:00:00+05:30</updated>
+   <id>http:/sukendhar.github.com/mongo-db-quieries</id>
+   <content type="html">&lt;div&gt;&lt;strong&gt;Here is the some important frequently used mongodb queries.&lt;/strong&gt;&lt;/div&gt;
+
+&lt;div&gt;After running mongodb server(mongod) and  interactive shell(mongo),  Our’s first command should be&lt;/div&gt;
+&lt;div&gt;1. help&lt;/div&gt;
+&lt;div&gt;-&amp;gt;Which will show a lot  of useful command that is helpful at any instance working with mongodb.&lt;/div&gt;
+
+&lt;div&gt;2.db.help();&lt;/div&gt;
+&lt;div&gt;-&amp;gt;It is database level help command that will show some of data level command.&lt;/div&gt;
+
+&lt;div&gt;3. db.help;&lt;/div&gt;
+&lt;div&gt;-&amp;gt; This command will show database level methods.&lt;/div&gt;
+&lt;div&gt;All above command is basic mongodb command.&lt;/div&gt;
+
+&lt;div&gt;&lt;strong&gt;How to create database?&lt;/strong&gt;
+&lt;strong&gt;show dbs; to show all the databases...&lt;/strong&gt;
+&lt;strong&gt;show collections; to view all the table in db...&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;1. use databasename;&lt;/div&gt;
+&lt;div&gt;In my case it is “use mongotest”,  here USE  is command to create database and  mongotest is database name. It is one of the nice feature of mongodb if there will be no database with this particular name, will create new database else use(move) to exiting database.&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt; Create table!!!!!!!&lt;/strong&gt;&lt;/div&gt;
+
+&lt;div&gt;1. db.tablename.save({“name”:”ankit”,”phone”:”1234567890″});&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;Fetch data from tables!!!!!!!!!!&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;1. db.tablename.find();&lt;/div&gt;
+&lt;div&gt;return data of table.&lt;/div&gt;
+&lt;div&gt;2.db.tablename.find;&lt;/div&gt;
+&lt;div&gt;return methods it self.&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;Create another record!!!!!!!!!&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;x={“name”:”abhay”,”phone”:”1234567890″}&lt;/div&gt;
+&lt;div&gt;db.contacts.save(x);&lt;/div&gt;
+&lt;div&gt;this is another way of creating new record and saving as an object.&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;Fetch particular record from tables !!!!!!!!!!&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;db.contacts.find({“name”:”ankit”});&lt;/div&gt;
+&lt;div&gt;N.T. -&amp;gt; Search option is case sensetive.&lt;/div&gt;
+&lt;div&gt;find record using id&lt;/div&gt;
+&lt;pre&gt;&amp;gt; db.contacts.find({_id:ObjectId(&quot;4ea3aa28eaaf3871b0549dfa&quot;)});
+{ &quot;_id&quot; : ObjectId(&quot;4ea3aa28eaaf3871b0549dfa&quot;),
+ &quot;name&quot; : &quot;ankit&quot;, &quot;phone&quot; : &quot;1234567890&quot; }&lt;/pre&gt;
+&lt;div&gt;&lt;strong&gt;Update particular record into tables !!!!!!!!!!&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;-&amp;gt; there is two way to update table&lt;/div&gt;
+&lt;div&gt;1. Using save()-&amp;gt;this is one of nice feature to mongodb, if there will already row in table it will update with new attribute else will create new record.&lt;/div&gt;
+&lt;div&gt;2. Using update()-&amp;gt;will only update exiting record.&lt;/div&gt;
+&lt;div&gt;find record using object&lt;/div&gt;
+&lt;pre&gt;&amp;gt; x = db.contacts.findOne({&quot;name&quot;:&quot;ankit&quot;});
+{
+        &quot;_id&quot; : ObjectId(&quot;4ea3aa28eaaf3871b0549dfa&quot;),
+        &quot;name&quot; : &quot;ankit&quot;,
+        &quot;phone&quot; : &quot;1234567890&quot;
+}
+Now we have object x with reference of contacts table.
+&amp;gt; x
+{
+        &quot;_id&quot; : ObjectId(&quot;4ea3aa28eaaf3871b0549dfa&quot;),
+        &quot;name&quot; : &quot;ankit&quot;,
+        &quot;phone&quot; : &quot;1234567890&quot;
+}&lt;/pre&gt;
+&lt;div&gt;Now i am going to add new attribute email&lt;/div&gt;
+&lt;pre&gt;&amp;gt; x.email = &quot;ankit@gmail.com&quot;
+ankit@gmail.com
+Let's see updated row 
+&amp;gt; x
+{
+        &quot;_id&quot; : ObjectId(&quot;4ea3aa28eaaf3871b0549dfa&quot;),
+        &quot;name&quot; : &quot;ankit&quot;,
+        &quot;phone&quot; : &quot;1234567890&quot;,
+        &quot;email&quot; : &quot;ankit@gmail.com&quot;
+}&lt;/pre&gt;
+&lt;div&gt;Now we fetch details from table&lt;/div&gt;
+&lt;pre&gt;&amp;gt; db.contacts.find();
+{ &quot;_id&quot; : ObjectId(&quot;4ea3aa28eaaf3871b0549dfa&quot;),
+ &quot;name&quot; : &quot;ankit&quot;, &quot;phone&quot; : &quot;1234567890&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;4ea3b067eaaf3871b0549dfb&quot;),
+ &quot;name&quot; : &quot;abhay&quot;, &quot;phone&quot; : &quot;1234567890&quot; }&lt;/pre&gt;
+&lt;div&gt;table is not updated here, we need to update table.&lt;/div&gt;
+&lt;pre&gt;&amp;gt; db.contacts.save(x);
+Now try again
+&amp;gt; db.contacts.find();
+{ &quot;_id&quot; : ObjectId(&quot;4ea3b067eaaf3871b0549dfb&quot;), 
+&quot;name&quot; : &quot;abhay&quot;, &quot;phone&quot; : &quot;1234567890&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;4ea3aa28eaaf3871b0549dfa&quot;),
+ &quot;name&quot; : &quot;ankit&quot;, &quot;phone&quot; : &quot;1234567890&quot;,
+ &quot;email&quot; : &quot;ankit@gmail.com&quot; }&lt;/pre&gt;
+&lt;div&gt;&lt;strong&gt;Delete particular record from tables !!!!!!!!!!&lt;/strong&gt;&lt;/div&gt;
+&lt;pre&gt;&amp;gt; db.contacts.remove(x);
+let's see row is there or not
+&amp;gt; db.contacts.find();
+{ &quot;_id&quot; : ObjectId(&quot;4ea3b067eaaf3871b0549dfb&quot;),
+ &quot;name&quot; : &quot;abhay&quot;, &quot;phone&quot; : &quot;1234567890&quot; }
+&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+yah, this row is deleted
+THAT ALL WAS THE CRUD OPERATION ON MONGODB TABLE.&lt;/p&gt;
+
+&lt;h2 class=&quot;gray&quot;&gt;Comments&lt;/h2&gt;
+
+&lt;div&gt;
+&lt;div id=&quot;disqus_thread&quot; aria-live=&quot;polite&quot;&gt;&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var disqus_shortname = 'sukendhar';
+  // var disqus_developer = 1;
+  var disqus_identifier = 'http://sukendharreddy.com/mongo-db-quieries/';
+  var disqus_url = 'http://sukendharreddy.com/mongo-db-quieries/';
+  var disqus_script = 'embed.js';
+  (function () {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+&lt;/script&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Mongo connection failure?</title>
+   <link href="http://sukendhar.github.com/mongo-connection-failure"/>
+   <updated>2012-09-16T00:00:00+05:30</updated>
+   <id>http:/sukendhar.github.com/mongo-connection-failure</id>
+   <content type="html">&lt;p&gt;Connection failed during mongo start:&lt;/p&gt;
+
+&lt;p&gt;Follow this steps:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rake rails:upgrade:backup
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mongod --repair
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo start mongodb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo status mongodb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mongo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;connection established message will be displayed.&lt;/p&gt;
+
+&lt;h2 class=&quot;gray&quot;&gt;Comments&lt;/h2&gt;
+
+&lt;div&gt;
+&lt;div id=&quot;disqus_thread&quot; aria-live=&quot;polite&quot;&gt;&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+	var disqus_shortname = 'sukendhar';
+	// var disqus_developer = 1;
+	var disqus_identifier = 'http://sukendharreddy.com/mongo-connection-failure/';
+	var disqus_url = 'http://sukendharreddy.com/mongo-connection-failure/';
+	var disqus_script = 'embed.js';
+	(function () {
+	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+&lt;/script&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Mongo DB installation</title>
+   <link href="http://sukendhar.github.com/mongo-db-installation"/>
+   <updated>2012-09-15T00:00:00+05:30</updated>
+   <id>http:/sukendhar.github.com/mongo-db-installation</id>
+   <content type="html">&lt;p&gt;The following command to install the latest stable version of MongoDB:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get install mongodb-10gen
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;When this command completes, you have successfully installed MongoDB! Continue for configuration and start-up suggestions.&lt;/p&gt;
+
+&lt;h2 id=&quot;span-style-text-decoration-none-border-bottom1px-dashedstarting-mongodbspan&quot;&gt;&lt;span style=&quot;text-decoration: none; border-bottom:1px dashed;&quot;&gt;&lt;strong&gt;Starting MongoDB&lt;/strong&gt;&lt;/span&gt;&lt;/h2&gt;
+
+&lt;p&gt;Upstart users can start the &lt;tt&gt;mongod&lt;/tt&gt; process by issuing the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo service mongodb start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;All other users can issue the following command to start &lt;tt&gt;mongod&lt;/tt&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo /etc/init.d/mongodb start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can verify that &lt;tt&gt;mongod&lt;/tt&gt; has started successfully by checking the contents of the log file at &lt;tt&gt;/var/log/mongodb/mongodb.log&lt;/tt&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;span-style-text-decoration-none-border-bottom1px-dashedstrongstopping-mongodbstrongspan&quot;&gt;&lt;span style=&quot;text-decoration: none; border-bottom:1px dashed;&quot;&gt;&lt;strong&gt;Stopping MongoDB&lt;/strong&gt;&lt;/span&gt;&lt;/h2&gt;
+
+&lt;p&gt;Upstart users can stop the &lt;tt&gt;mongod&lt;/tt&gt; process by issuing the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo service mongodb stop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;All other users can issue the following command to stop &lt;tt&gt;mongod&lt;/tt&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo /etc/init.d/mongodb stop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;span-style-text-decoration-none-border-bottom1px-dashedstrongrestarting-mongodbstrongspan&quot;&gt;&lt;span style=&quot;text-decoration: none; border-bottom:1px dashed;&quot;&gt;&lt;strong&gt;Restarting MongoDB&lt;/strong&gt;&lt;/span&gt;&lt;/h2&gt;
+
+&lt;p&gt;Upstart users can restart the &lt;tt&gt;mongod&lt;/tt&gt; process by issuing the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo service mongodb restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;All other users can issue the following command to restart &lt;tt&gt;mongod&lt;/tt&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo /etc/init.d/mongodb restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;type “mongo” in your terminal to see the version&lt;/p&gt;
+
+&lt;h2 class=&quot;gray&quot;&gt;Comments&lt;/h2&gt;
+
+&lt;div&gt;
+&lt;div id=&quot;disqus_thread&quot; aria-live=&quot;polite&quot;&gt;&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var disqus_shortname = 'sukendhar';
+  // var disqus_developer = 1;
+  var disqus_identifier = 'http://sukendharreddy.com/mongo-db-installation/';
+  var disqus_url = 'http://sukendharreddy.com/mongo-db-installation/';
+  var disqus_script = 'embed.js';
+  (function () {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+&lt;/script&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Contact form in Rails 3</title>
+   <link href="http://sukendhar.github.com/contact-form-in-rails-3"/>
+   <updated>2012-09-14T00:00:00+05:30</updated>
+   <id>http:/sukendhar.github.com/contact-form-in-rails-3</id>
+   <content type="html">&lt;p&gt;The goal of this tutorial is to build a form that when submitted will validate and email the data.&lt;/p&gt;
+&lt;div&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/div&gt;
+&lt;p&gt;To simplify this, I’m just using Google Apps to manage email addresses. If you have your own email server just modify the settings as needed. To get started you’ll need:&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;A Google Apps account, of course&lt;/li&gt;
+	&lt;li&gt;Ruby on Rails 3.2.2 (give or take a few version numbers)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;strong&gt;Configuring Rails for GMail&lt;/strong&gt;&lt;/div&gt;
+&lt;p&gt;In an existing or new application, open &lt;code&gt;config/application.rb&lt;/code&gt;. Insert the following snippet in the &lt;code&gt;Application&lt;/code&gt; class.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;config.action_mailer.smtp_settings = {
+  :address              =&amp;gt; &quot;smtp.gmail.com&quot;,
+  :port                 =&amp;gt; 587,
+  :domain               =&amp;gt; &quot;yourdomain.dev&quot;,
+  :user_name            =&amp;gt; &quot;from@yourdomain.dev&quot;,
+  :password             =&amp;gt; &quot;Super-Secure-Password&quot;,
+  :authentication       =&amp;gt; :plain,
+  :enable_starttls_auto =&amp;gt; true
+}
+
+config.action_mailer.default_url_options = {
+  :host =&amp;gt; &quot;yourdomain.dev&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Set the value of &lt;code&gt;:domain&lt;/code&gt; to the domain you’re using for Google Apps, and &lt;code&gt;:user_name&lt;/code&gt; and &lt;code&gt;:password&lt;/code&gt; to your Google Apps account credentials. In the second block replace &lt;code&gt;:host&lt;/code&gt; with the domain where the application is reachable from. The &lt;code&gt;:host&lt;/code&gt; option is used to ensure that all links in email templates generate full URLs.&lt;/p&gt;
+&lt;div&gt;&lt;strong&gt;The Message Model&lt;/strong&gt;&lt;/div&gt;
+&lt;p&gt;To allow validation of the message, I create a model and just include &lt;code&gt;ActiveModel&lt;/code&gt;’s validations. Allowing the model to be written just like any other Rails model.&lt;/p&gt;
+
+&lt;p&gt;Create the file &lt;code&gt;app/models/message.rb&lt;/code&gt;, or with a name of your choice. Make the file look similar to the following.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Message
+
+  include ActiveModel::Validations
+  include ActiveModel::Conversion
+  extend ActiveModel::Naming
+
+  attr_accessor :name, :email, :subject, :body
+
+  validates :name, :email, :subject, :body, :presence =&amp;gt; true
+  validates :email, :format =&amp;gt; { :with =&amp;gt; %r{.+@.+\..+} }, :allow_blank =&amp;gt; true
+
+  def initialize(attributes = {})
+    attributes.each do |name, value|
+      send(&quot;#{name}=&quot;, value)
+    end
+  end
+
+  def persisted?
+    false
+  end
+
+end&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is fairly self explanatory. A message can have a subject and body, as well as the name and email address of the sender. All of the fields are required, and the email address is verified with a regular expression.&lt;/p&gt;
+&lt;div&gt;&lt;strong&gt;The Mailer Model and Views&lt;/strong&gt;&lt;/div&gt;
+&lt;p&gt;Run &lt;code&gt;rails g mailer NotificationsMailer&lt;/code&gt;. This generates &lt;code&gt;app/mailers/notifications_mailer.rb&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;We’ll want &lt;code&gt;notifications_mailer.rb&lt;/code&gt; to look similar to this snippet. Check out the &lt;code&gt;ActionMailer&lt;/code&gt; API for specifics on what’s happening here.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class NotificationsMailer &amp;lt; ActionMailer::Base
+
+  default :from =&amp;gt; &quot;noreply@youdomain.dev&quot;
+  default :to =&amp;gt; &quot;you@youremail.dev&quot;
+
+  def new_message(message)
+    @message = message
+    mail(:subject =&amp;gt; &quot;[YourWebsite.tld] #{message.subject}&quot;)
+  end
+
+end&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Replace &lt;code&gt;:to&lt;/code&gt;, &lt;code&gt;:from&lt;/code&gt; and &lt;code&gt;:subject&lt;/code&gt; with the address you’d like the email sent to, the address it’s being sent from (should be the one you configured the Rails application with), and the subject of the email.&lt;/p&gt;
+
+&lt;p&gt;Create the file &lt;code&gt;app/views/notifications_mailer/new_message.text.erb&lt;/code&gt;.How the message looks is entirely up to you. Here’s an example of how it could be laid out.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Name: &amp;lt;%= @message.name %&amp;gt;
+
+Email: &amp;lt;%= @message.email %&amp;gt;
+
+Subject: &amp;lt;%= @message.subject %&amp;gt;
+
+Body: &amp;lt;%= @message.body %&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div&gt;&lt;strong&gt;The Controller and View&lt;/strong&gt;&lt;/div&gt;
+&lt;p&gt;Run &lt;code&gt;rails g controller contact&lt;/code&gt; and then open &lt;code&gt;app/controllers/contact_controller.rb&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The controller will only need two actions: &lt;code&gt;new&lt;/code&gt; and &lt;code&gt;create&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class ContactController &amp;lt; ApplicationController
+
+  def new
+    @message = Message.new
+  end
+
+  def create
+    @message = Message.new(params[:message])
+
+    if @message.valid?
+      NotificationsMailer.new_message(@message).deliver
+      redirect_to(root_path, :notice =&amp;gt; &quot;Message was successfully sent.&quot;)
+    else
+      flash.now.alert = &quot;Please fill all fields.&quot;
+      render :new
+    end
+  end
+
+end&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To get these actions working, open up &lt;code&gt;config/routes.rb&lt;/code&gt; and insert the following two lines.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;match 'contact' =&amp;gt; 'contact#new', :as =&amp;gt; 'contact', :via =&amp;gt; :get
+match 'contact' =&amp;gt; 'contact#create', :as =&amp;gt; 'contact', :via =&amp;gt; :post&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When a &lt;code&gt;GET&lt;/code&gt; request is made to &lt;code&gt;/contact&lt;/code&gt;, the &lt;code&gt;new&lt;/code&gt; action is called. When a &lt;code&gt;POST&lt;/code&gt; request is made to &lt;code&gt;/contact&lt;/code&gt;, the &lt;code&gt;create&lt;/code&gt; action is called.&lt;/p&gt;
+
+&lt;p&gt;Create &lt;code&gt;app/views/contact/new.html.erb&lt;/code&gt;. As with the email template, this template is entirely up to you, I’m only providing an example of what it could look like.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;%= form_for @message, :url =&amp;gt; contact_path do |form| %&amp;gt;
+  &amp;lt;fieldset&amp;gt;
+    &amp;lt;div&amp;gt;
+      &amp;lt;%= form.label :name %&amp;gt;
+      &amp;lt;%= form.text_field :name %&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div&amp;gt;
+      &amp;lt;%= form.label :email %&amp;gt;
+      &amp;lt;%= form.text_field :email %&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div&amp;gt;
+      &amp;lt;%= form.label :subject %&amp;gt;
+      &amp;lt;%= form.text_field :subject %&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div&amp;gt;
+      &amp;lt;%= form.label :body %&amp;gt;
+      &amp;lt;%= form.text_area :body %&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/fieldset&amp;gt;
+
+  &amp;lt;fieldset&amp;gt;
+    &amp;lt;%= form.submit &quot;Send&quot; %&amp;gt;
+  &amp;lt;/fieldset&amp;gt;
+&amp;lt;% end %&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;strong&gt;Try it&lt;/strong&gt;&lt;/div&gt;
+&lt;p&gt;Start your &lt;code&gt;rails server&lt;/code&gt; and go to &lt;code&gt;/contact&lt;/code&gt;. Fill out the form and hit send. If everything was done correctly an email should arrive in the inbox of the address specified.&lt;/p&gt;
+
+&lt;h2 class=&quot;gray&quot;&gt;Comments&lt;/h2&gt;
+
+&lt;div&gt;
+&lt;div id=&quot;disqus_thread&quot; aria-live=&quot;polite&quot;&gt;&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var disqus_shortname = 'sukendhar';
+  // var disqus_developer = 1;
+  var disqus_identifier = 'http://sukendharreddy.com/contact-form-in-rails-3/';
+  var disqus_url = 'http://sukendharreddy.com/contact-form-in-rails-3/';
+  var disqus_script = 'embed.js';
+  (function () {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+&lt;/script&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Difference between Rails 2.3 and 3</title>
+   <link href="http://sukendhar.github.com/difference-between-rails-2-3-and-3"/>
+   <updated>2012-09-07T00:00:00+05:30</updated>
+   <id>http:/sukendhar.github.com/difference-between-rails-2-3-and-3</id>
+   <content type="html">&lt;pre&gt;1. Introduction of bundler (New way to manage your gem dependencies) 
+2. Gemfile and Gemfile.lock (Where all your gem dependencies lies, instead of environment.rb) 
+3. A new .rb file in config/ folder, named as application.rb (Which has everything that previously environment.rb had) 
+4. Change in SQL Structure: Model.where(:activated =&amp;gt; true) 
+5. All the mailer script will now be in app/mailers folder, earlier we kept inside app/models. 
+6. Rails3-UJS support. for links and forms to work as AJAX, instead of writing complex lines of code, we write :remote =&amp;gt; true 
+7. HTML 5 support. 
+8. Changes in the model based validation syntax: validates :name, :presence =&amp;gt; true 
+9. Ability to install windows/ruby/jruby/development/production specific gems to Gemfile. 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;group :production do 
+  gem 'will_paginate' 
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt;
+
+&lt;h2 class=&quot;gray&quot;&gt;Comments&lt;/h2&gt;
+
+&lt;div&gt;
+&lt;div id=&quot;disqus_thread&quot; aria-live=&quot;polite&quot;&gt;&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+	var disqus_shortname = 'sukendhar';
+	// var disqus_developer = 1;
+	var disqus_identifier = 'http://sukendharreddy.com/difference-between-rails-2-3-and-3/';
+	var disqus_url = 'http://sukendharreddy.com/difference-between-rails-2-3-and-3/';
 	var disqus_script = 'embed.js';
 	(function () {
 	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -173,7 +627,7 @@
  <entry>
    <title>What is Ruby on Rails?</title>
    <link href="http://sukendhar.github.com/What-is-ruby-on-rails"/>
-   <updated>2012-11-12T00:00:00+05:30</updated>
+   <updated>2012-08-12T00:00:00+05:30</updated>
    <id>http:/sukendhar.github.com/What-is-ruby-on-rails</id>
    <content type="html">&lt;p&gt;&lt;span class=&quot;sub_heading&quot;&gt;What is Ruby :&lt;/span&gt;
 Ruby is a pure object-oriented programming language with a super clean syntax that makes programming elegant and fun. Ruby successfully combines Smalltalkâs conceptual elegance, Pythons ease of use and learning, and Perls pragmatism. Ruby originated in Japan in the early 1990s, and has started to become popular worldwide in the past few years as more English language books and documentation have become available.&lt;/p&gt;
@@ -194,8 +648,8 @@ What’s special about that? There are dozens of frameworks out there and most
 &lt;script type=&quot;text/javascript&quot;&gt;
 	var disqus_shortname = 'sukendhar';
 	// var disqus_developer = 1;
-	var disqus_identifier = 'http://sukendhar.github.io/What-is-ruby-on-rails';
-	var disqus_url = 'http://sukendhar.github.io/What-is-ruby-on-rails';
+	var disqus_identifier = 'http://sukendharreddy.com/What-is-ruby-on-rails';
+	var disqus_url = 'http://sukendharreddy.com/What-is-ruby-on-rails';
 	var disqus_script = 'embed.js';
 	(function () {
 	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -204,6 +658,17 @@ What’s special about that? There are dozens of frameworks out there and most
 	}());
 &lt;/script&gt;
 
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Hello world!</title>
+   <link href="http://sukendhar.github.com/hello-world"/>
+   <updated>2012-07-26T00:00:00+05:30</updated>
+   <id>http:/sukendhar.github.com/hello-world</id>
+   <content type="html">&lt;p&gt;Welcome to my blog &lt;a href=&quot;http://sukendharreddy.com&quot;&gt;sukendharreddy.com!&lt;/a&gt; This is my very first post.&lt;/p&gt;
+
+&lt;p&gt;Enjoy…!!!&lt;/p&gt;
 </content>
  </entry>
  

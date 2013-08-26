@@ -1,0 +1,262 @@
+<!--  -->
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> 	
+<html lang="en"> 
+<!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />	<!-- Force Latest IE rendering engine -->
+    <title>Contact form in Rails 3</title>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href="http://feeds.feedburner.com/sukendhar" rel="alternate" title="Sukendhar" type="application/atom+xml" /> 
+    <link id="avatar" rel="shortcut icon" href="/static/images/favicon.jpg" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!--[if IE 7]>
+      <script src="/static/css/font-awesome-ie7.css"></script>
+    <![endif]-->
+  </head>
+  <body class="main_container">
+    <div class="container">	
+      <div id='mobile' class='two columns hidden'>
+        <a id="avatar" href="/"></a>
+
+          <ul id="me">
+            <li><span class="my_name">Sukendhar Reddy</span></li>
+            <!-- <li class="gray my_desc">Ruby on Rails developer</li> -->
+          </ul>
+
+          <table id="buttons unstyled">
+            <td><a href="http://github.com/sukendhar" rel="me" class="social github" title="I share and fork code here" target="_blank"></a></td>
+            <td><a href="http://www.linkedin.com/in/sukendharreddy" rel="me" class="social linkedin" title="Go to LinkedIn profile" target="_blank"></a></td>
+            <td><a href="http://www.twitter.com/sukendhar" rel="me" class="social twitter" title="You should follow me" target="_blank"></a></td>
+            <td><a href="http://feeds.feedburner.com/sukendhar" rel="me" class="social rss" title="Go to feedburner sukendhar rss feed" target="_blank"></a></td>
+            <td><a href="https://plus.google.com/109867123691878848659/posts" rel="me" class="social gplus" title="Go to Google Plus profile" target="_blank"></a></td> 
+            <td><a href="mailto:sukendhar555@gmail.com?subject=hi" rel="me" class="social mail" title="Say hi" target="_blank"></a></td>
+          </table>
+      </div>
+
+      <div class="four columns sidebar">
+        <section>
+          <a id="avatar" href="/"></a>
+
+          <ul id="me">
+            <li><span class="my_name">Sukendhar Reddy</span></li>
+            <!-- <li class="gray my_desc">Ruby on Rails developer</li> -->
+          </ul>
+
+          <table id="buttons unstyled">
+            <td><a href="http://github.com/sukendhar" rel="me" class="social github" title="I share and fork code here" target="_blank"></a></td>
+            <td><a href="http://www.linkedin.com/in/sukendharreddy" rel="me" class="social linkedin" title="Go to LinkedIn profile" target="_blank"></a></td>
+            <td><a href="http://www.twitter.com/sukendhar" rel="me" class="social twitter" title="You should follow me" target="_blank"></a></td>
+            <td><a href="http://feeds.feedburner.com/sukendhar" rel="me" class="social rss" title="Go to feedburner sukendhar rss feed" target="_blank"></a></td>
+            <td><a href="https://plus.google.com/109867123691878848659/posts" rel="me" class="social gplus" title="Go to Google Plus profile" target="_blank"></a></td> 
+            <td><a href="mailto:sukendhar555@gmail.com?subject=hi" rel="me" class="social mail" title="Say hi" target="_blank"></a></td>
+          </table>
+
+        </section>
+      </div>
+
+      <article class='ten columns offset-by-four' id="article-content">
+  <header class="ten columns" id="article-header">
+    <h1>Contact form in Rails 3</h1>
+  </header>
+
+  <div class='ten columns gray' id="date-header">
+    <p>
+      14, September 2012
+  
+    </p>
+
+  </div>
+
+  <div class="ten columns" id="article-content">
+    <p>The goal of this tutorial is to build a form that when submitted will validate and email the data.</p>
+<div><strong>Prerequisites</strong></div>
+<p>To simplify this, I’m just using Google Apps to manage email addresses. If you have your own email server just modify the settings as needed. To get started you’ll need:</p>
+<ol>
+	<li>A Google Apps account, of course</li>
+	<li>Ruby on Rails 3.2.2 (give or take a few version numbers)</li>
+</ol>
+<div><strong>Configuring Rails for GMail</strong></div>
+<p>In an existing or new application, open <code>config/application.rb</code>. Insert the following snippet in the <code>Application</code> class.</p>
+<pre><code>config.action_mailer.smtp_settings = {
+  :address              =&gt; "smtp.gmail.com",
+  :port                 =&gt; 587,
+  :domain               =&gt; "yourdomain.dev",
+  :user_name            =&gt; "from@yourdomain.dev",
+  :password             =&gt; "Super-Secure-Password",
+  :authentication       =&gt; :plain,
+  :enable_starttls_auto =&gt; true
+}
+
+config.action_mailer.default_url_options = {
+  :host =&gt; "yourdomain.dev"
+}
+</code></pre>
+<p>Set the value of <code>:domain</code> to the domain you’re using for Google Apps, and <code>:user_name</code> and <code>:password</code> to your Google Apps account credentials. In the second block replace <code>:host</code> with the domain where the application is reachable from. The <code>:host</code> option is used to ensure that all links in email templates generate full URLs.</p>
+<div><strong>The Message Model</strong></div>
+<p>To allow validation of the message, I create a model and just include <code>ActiveModel</code>’s validations. Allowing the model to be written just like any other Rails model.</p>
+
+<p>Create the file <code>app/models/message.rb</code>, or with a name of your choice. Make the file look similar to the following.</p>
+<pre><code>class Message
+
+  include ActiveModel::Validations
+  include ActiveModel::Conversion
+  extend ActiveModel::Naming
+
+  attr_accessor :name, :email, :subject, :body
+
+  validates :name, :email, :subject, :body, :presence =&gt; true
+  validates :email, :format =&gt; { :with =&gt; %r{.+@.+\..+} }, :allow_blank =&gt; true
+
+  def initialize(attributes = {})
+    attributes.each do |name, value|
+      send("#{name}=", value)
+    end
+  end
+
+  def persisted?
+    false
+  end
+
+end</code></pre>
+<p>This is fairly self explanatory. A message can have a subject and body, as well as the name and email address of the sender. All of the fields are required, and the email address is verified with a regular expression.</p>
+<div><strong>The Mailer Model and Views</strong></div>
+<p>Run <code>rails g mailer NotificationsMailer</code>. This generates <code>app/mailers/notifications_mailer.rb</code>.</p>
+
+<p>We’ll want <code>notifications_mailer.rb</code> to look similar to this snippet. Check out the <code>ActionMailer</code> API for specifics on what’s happening here.</p>
+<pre><code>class NotificationsMailer &lt; ActionMailer::Base
+
+  default :from =&gt; "noreply@youdomain.dev"
+  default :to =&gt; "you@youremail.dev"
+
+  def new_message(message)
+    @message = message
+    mail(:subject =&gt; "[YourWebsite.tld] #{message.subject}")
+  end
+
+end</code></pre>
+<p>Replace <code>:to</code>, <code>:from</code> and <code>:subject</code> with the address you’d like the email sent to, the address it’s being sent from (should be the one you configured the Rails application with), and the subject of the email.</p>
+
+<p>Create the file <code>app/views/notifications_mailer/new_message.text.erb</code>.How the message looks is entirely up to you. Here’s an example of how it could be laid out.</p>
+<pre><code>Name: &lt;%= @message.name %&gt;
+
+Email: &lt;%= @message.email %&gt;
+
+Subject: &lt;%= @message.subject %&gt;
+
+Body: &lt;%= @message.body %&gt;</code></pre>
+<p><br /></p>
+<div><strong>The Controller and View</strong></div>
+<p>Run <code>rails g controller contact</code> and then open <code>app/controllers/contact_controller.rb</code>.</p>
+
+<p>The controller will only need two actions: <code>new</code> and <code>create</code>.</p>
+<pre><code>class ContactController &lt; ApplicationController
+
+  def new
+    @message = Message.new
+  end
+
+  def create
+    @message = Message.new(params[:message])
+
+    if @message.valid?
+      NotificationsMailer.new_message(@message).deliver
+      redirect_to(root_path, :notice =&gt; "Message was successfully sent.")
+    else
+      flash.now.alert = "Please fill all fields."
+      render :new
+    end
+  end
+
+end</code></pre>
+<p>To get these actions working, open up <code>config/routes.rb</code> and insert the following two lines.</p>
+<pre><code>match 'contact' =&gt; 'contact#new', :as =&gt; 'contact', :via =&gt; :get
+match 'contact' =&gt; 'contact#create', :as =&gt; 'contact', :via =&gt; :post</code></pre>
+<p>When a <code>GET</code> request is made to <code>/contact</code>, the <code>new</code> action is called. When a <code>POST</code> request is made to <code>/contact</code>, the <code>create</code> action is called.</p>
+
+<p>Create <code>app/views/contact/new.html.erb</code>. As with the email template, this template is entirely up to you, I’m only providing an example of what it could look like.</p>
+<pre><code>&lt;%= form_for @message, :url =&gt; contact_path do |form| %&gt;
+  &lt;fieldset&gt;
+    &lt;div&gt;
+      &lt;%= form.label :name %&gt;
+      &lt;%= form.text_field :name %&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      &lt;%= form.label :email %&gt;
+      &lt;%= form.text_field :email %&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;%= form.label :subject %&gt;
+      &lt;%= form.text_field :subject %&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      &lt;%= form.label :body %&gt;
+      &lt;%= form.text_area :body %&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset&gt;
+    &lt;%= form.submit "Send" %&gt;
+  &lt;/fieldset&gt;
+&lt;% end %&gt;</code></pre>
+<div><strong>Try it</strong></div>
+<p>Start your <code>rails server</code> and go to <code>/contact</code>. Fill out the form and hit send. If everything was done correctly an email should arrive in the inbox of the address specified.</p>
+
+<h2 class="gray">Comments</h2>
+
+<div>
+<div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+<script type="text/javascript">
+  var disqus_shortname = 'sukendhar';
+  // var disqus_developer = 1;
+  var disqus_identifier = 'http://sukendharreddy.com/contact-form-in-rails-3/';
+  var disqus_url = 'http://sukendharreddy.com/contact-form-in-rails-3/';
+  var disqus_script = 'embed.js';
+  (function () {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+</script>
+
+
+  </div>
+
+</article>
+
+    </div>
+
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37000106-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html> 

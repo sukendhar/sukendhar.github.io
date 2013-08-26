@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />	<!-- Force Latest IE rendering engine -->
-    <title>Rails upgrade 2.3.x to 3.2.x</title>
+    <title>Mongo DB Quieries</title>
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -71,64 +71,110 @@
 
       <article class='ten columns offset-by-four' id="article-content">
   <header class="ten columns" id="article-header">
-    <h1>Rails upgrade 2.3.x to 3.2.x</h1>
+    <h1>Mongo DB Quieries</h1>
   </header>
 
   <div class='ten columns gray' id="date-header">
     <p>
-      20, January 2013
+      16, September 2012
   
     </p>
 
   </div>
 
   <div class="ten columns" id="article-content">
-    <p>Install Rails Upgrade plugin </p>
+    <div><strong>Here is the some important frequently used mongodb queries.</strong></div>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>ruby script/plugin install git://github.com/rails/rails_upgrade.git
-</code></pre>
-</div>
+<div>After running mongodb server(mongod) and  interactive shell(mongo),  Our’s first command should be</div>
+<div>1. help</div>
+<div>-&gt;Which will show a lot  of useful command that is helpful at any instance working with mongodb.</div>
 
-<p>Then check for files list which we need to change</p>
+<div>2.db.help();</div>
+<div>-&gt;It is database level help command that will show some of data level command.</div>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake rails:upgrade:check
-</code></pre>
-</div>
+<div>3. db.help;</div>
+<div>-&gt; This command will show database level methods.</div>
+<div>All above command is basic mongodb command.</div>
 
-<p>This should give you an idea of the manual changes that need to be done, but you’ll probably want to upgrade some of those automatically.  The fastest way to do this is to run “rails .” , which will simply generate a new app on top of your existing code.  But this generation also has the effect of replacing some existing files, some of which you might not want to replace.  To back those up, first run:</p>
+<div><strong>How to create database?</strong>
+<strong>show dbs; to show all the databases...</strong>
+<strong>show collections; to view all the table in db...</strong></div>
+<div></div>
+<div>1. use databasename;</div>
+<div>In my case it is “use mongotest”,  here USE  is command to create database and  mongotest is database name. It is one of the nice feature of mongodb if there will be no database with this particular name, will create new database else use(move) to exiting database.</div>
+<div><strong> Create table!!!!!!!</strong></div>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake rails:upgrade:backup
-</code></pre>
-</div>
-
-<p>That will backup files you’ve probably edited that will be replaced in the upgrade; if you finish the upgrade and find that you don’t need the old copies, just delete them.  Otherwise, copy their contents back into the new files or run one of the following upgraders…</p>
-
-<h2 id="span-style-text-decoration-none-border-bottom1px-dashedstrongroutes-upgraderstrongspan"><span style="text-decoration: none; border-bottom:1px dashed;"><strong>Routes upgrader</strong></span></h2>
-
-<p>To generate a new routes file from your existing routes file, simply run the following Rake task:</p>
-
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake rails:upgrade:routes
-</code></pre>
-</div>
-
-<p>This will output a new routes file that you can copy and paste or pipe into a new, Rails 3 compatible config/routes.rb.</p>
-
-<h2 id="span-style-text-decoration-none-border-bottom1px-dashedstronggemfile-generatorstrongspan"><span style="text-decoration: none; border-bottom:1px dashed;"><strong>Gemfile generator</strong></span></h2>
-
-<p>Creating a new Gemfile is as simple as running:</p>
-
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake rails:upgrade:gems
-</code></pre>
-</div>
-
-<p>This task will extract your config.gem calls and generate code you can put into a bundler compatible Gemfile.</p>
-
-<h2 id="span-style-text-decoration-none-border-bottom1px-dashedstrongconfiguration-generatorstrongspan"><span style="text-decoration: none; border-bottom:1px dashed;"><strong>Configuration generator</strong></span></h2>
-
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake rails:upgrade:configuration</code></pre>
-</div>
-
-<p>Much of the configuration information that lived in environment.rb now belongs in a new file named config/application.rb; use the following task to generate code you can put into config/application.rb from your existing config/environment.rb</p>
+<div>1. db.tablename.save({“name”:”ankit”,”phone”:”1234567890″});</div>
+<div><strong>Fetch data from tables!!!!!!!!!!</strong></div>
+<div>1. db.tablename.find();</div>
+<div>return data of table.</div>
+<div>2.db.tablename.find;</div>
+<div>return methods it self.</div>
+<div><strong>Create another record!!!!!!!!!</strong></div>
+<div>x={“name”:”abhay”,”phone”:”1234567890″}</div>
+<div>db.contacts.save(x);</div>
+<div>this is another way of creating new record and saving as an object.</div>
+<div><strong>Fetch particular record from tables !!!!!!!!!!</strong></div>
+<div>db.contacts.find({“name”:”ankit”});</div>
+<div>N.T. -&gt; Search option is case sensetive.</div>
+<div>find record using id</div>
+<pre>&gt; db.contacts.find({_id:ObjectId("4ea3aa28eaaf3871b0549dfa")});
+{ "_id" : ObjectId("4ea3aa28eaaf3871b0549dfa"),
+ "name" : "ankit", "phone" : "1234567890" }</pre>
+<div><strong>Update particular record into tables !!!!!!!!!!</strong></div>
+<div>-&gt; there is two way to update table</div>
+<div>1. Using save()-&gt;this is one of nice feature to mongodb, if there will already row in table it will update with new attribute else will create new record.</div>
+<div>2. Using update()-&gt;will only update exiting record.</div>
+<div>find record using object</div>
+<pre>&gt; x = db.contacts.findOne({"name":"ankit"});
+{
+        "_id" : ObjectId("4ea3aa28eaaf3871b0549dfa"),
+        "name" : "ankit",
+        "phone" : "1234567890"
+}
+Now we have object x with reference of contacts table.
+&gt; x
+{
+        "_id" : ObjectId("4ea3aa28eaaf3871b0549dfa"),
+        "name" : "ankit",
+        "phone" : "1234567890"
+}</pre>
+<div>Now i am going to add new attribute email</div>
+<pre>&gt; x.email = "ankit@gmail.com"
+ankit@gmail.com
+Let's see updated row 
+&gt; x
+{
+        "_id" : ObjectId("4ea3aa28eaaf3871b0549dfa"),
+        "name" : "ankit",
+        "phone" : "1234567890",
+        "email" : "ankit@gmail.com"
+}</pre>
+<div>Now we fetch details from table</div>
+<pre>&gt; db.contacts.find();
+{ "_id" : ObjectId("4ea3aa28eaaf3871b0549dfa"),
+ "name" : "ankit", "phone" : "1234567890" }
+{ "_id" : ObjectId("4ea3b067eaaf3871b0549dfb"),
+ "name" : "abhay", "phone" : "1234567890" }</pre>
+<div>table is not updated here, we need to update table.</div>
+<pre>&gt; db.contacts.save(x);
+Now try again
+&gt; db.contacts.find();
+{ "_id" : ObjectId("4ea3b067eaaf3871b0549dfb"), 
+"name" : "abhay", "phone" : "1234567890" }
+{ "_id" : ObjectId("4ea3aa28eaaf3871b0549dfa"),
+ "name" : "ankit", "phone" : "1234567890",
+ "email" : "ankit@gmail.com" }</pre>
+<div><strong>Delete particular record from tables !!!!!!!!!!</strong></div>
+<pre>&gt; db.contacts.remove(x);
+let's see row is there or not
+&gt; db.contacts.find();
+{ "_id" : ObjectId("4ea3b067eaaf3871b0549dfb"),
+ "name" : "abhay", "phone" : "1234567890" }
+</pre>
+<p><br />
+yah, this row is deleted
+THAT ALL WAS THE CRUD OPERATION ON MONGODB TABLE.</p>
 
 <h2 class="gray">Comments</h2>
 
@@ -138,16 +184,16 @@
 </div>
 
 <script type="text/javascript">
-	var disqus_shortname = 'sukendhar';
-	// var disqus_developer = 1;
-	var disqus_identifier = 'http://sukendharreddy.com/Rails-Upgrade-2.3.x-to-3.2.x/';
-	var disqus_url = 'http://sukendharreddy.com/Rails-Upgrade-2.3.x-to-3.2.x/';
-	var disqus_script = 'embed.js';
-	(function () {
-	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	}());
+  var disqus_shortname = 'sukendhar';
+  // var disqus_developer = 1;
+  var disqus_identifier = 'http://sukendharreddy.com/mongo-db-quieries/';
+  var disqus_url = 'http://sukendharreddy.com/mongo-db-quieries/';
+  var disqus_script = 'embed.js';
+  (function () {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
 </script>
 
 

@@ -23,7 +23,8 @@ This should give you an idea of the manual changes that need to be done, but you
     
 That will backup files you've probably edited that will be replaced in the upgrade; if you finish the upgrade and find that you don't need the old copies, just delete them.  Otherwise, copy their contents back into the new files or run one of the following upgraders...
  
-<h2>Routes upgrader</h2>
+<span style= "text-decoration: none; border-bottom:1px dashed;"><strong>Routes upgrader</strong></span>
+---------- 
  
 To generate a new routes file from your existing routes file, simply run the following Rake task:
  
@@ -32,8 +33,9 @@ To generate a new routes file from your existing routes file, simply run the fol
 </div>
     
 This will output a new routes file that you can copy and paste or pipe into a new, Rails 3 compatible config/routes.rb.
- 
-<h2>Gemfile generator</h2> 
+
+<span style= "text-decoration: none; border-bottom:1px dashed;"><strong>Gemfile generator</strong></span>
+----------  
  
 Creating a new Gemfile is as simple as running:
  
@@ -42,8 +44,9 @@ Creating a new Gemfile is as simple as running:
 </div>
     
 This task will extract your config.gem calls and generate code you can put into a bundler compatible Gemfile.
- 
-<h2>Configuration generator</h2>
+
+<span style= "text-decoration: none; border-bottom:1px dashed;"><strong>Configuration generator</strong></span>
+----------
 
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake rails:upgrade:configuration</code></pre>
 </div>
@@ -60,8 +63,8 @@ Much of the configuration information that lived in environment.rb now belongs i
 <script type="text/javascript">
 	var disqus_shortname = 'sukendhar';
 	// var disqus_developer = 1;
-	var disqus_identifier = 'http://sukendhar.github.io/Rails-Upgrade-2.3.x-to-3.2.x/';
-	var disqus_url = 'http://sukendhar.github.io/Rails-Upgrade-2.3.x-to-3.2.x/';
+	var disqus_identifier = 'http://sukendharreddy.com/Rails-Upgrade-2.3.x-to-3.2.x/';
+	var disqus_url = 'http://sukendharreddy.com/Rails-Upgrade-2.3.x-to-3.2.x/';
 	var disqus_script = 'embed.js';
 	(function () {
 	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

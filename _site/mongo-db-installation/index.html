@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />	<!-- Force Latest IE rendering engine -->
-    <title>Sukendhar's blog</title>
+    <title>Mongo DB installation</title>
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -69,54 +69,91 @@
         </section>
       </div>
 
-      <ul id="posts" class="twelve columns offset-by-four">
+      <article class='ten columns offset-by-four' id="article-content">
+  <header class="ten columns" id="article-header">
+    <h1>Mongo DB installation</h1>
+  </header>
+
+  <div class='ten columns gray' id="date-header">
+    <p>
+      15, September 2012
   
-    <li>
-      <a class="nine columns" href="/Rails-Upgrade-2.3.x-to-3.2.x">Rails upgrade 2.3.x to 3.2.x</a>
-      <span class="two columns">Jan 2013</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/Getting-started-with-git">Getting started with git</a>
-      <span class="two columns">Dec 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/mongo-db-quieries">Mongo DB Quieries</a>
-      <span class="two columns">Sep 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/mongo-connection-failure">Mongo connection failure?</a>
-      <span class="two columns">Sep 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/mongo-db-installation">Mongo DB installation</a>
-      <span class="two columns">Sep 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/contact-form-in-rails-3">Contact form in Rails 3</a>
-      <span class="two columns">Sep 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/difference-between-rails-2-3-and-3">Difference between Rails 2.3 and 3</a>
-      <span class="two columns">Sep 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/What-is-ruby-on-rails">What is Ruby on Rails?</a>
-      <span class="two columns">Aug 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/hello-world">Hello world!</a>
-      <span class="two columns">Jul 2012</span>
-    </li>
-  
-</ul>
+    </p>
+
+  </div>
+
+  <div class="ten columns" id="article-content">
+    <p>The following command to install the latest stable version of MongoDB:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>sudo apt-get install mongodb-10gen
+</code></pre></div>
+
+<p>When this command completes, you have successfully installed MongoDB! Continue for configuration and start-up suggestions.</p>
+
+<h2 id="span-style-text-decoration-none-border-bottom1px-dashedstarting-mongodbspan"><span style="text-decoration: none; border-bottom:1px dashed;"><strong>Starting MongoDB</strong></span></h2>
+
+<p>Upstart users can start the <tt>mongod</tt> process by issuing the following command:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>sudo service mongodb start
+</code></pre></div>
+
+<p>All other users can issue the following command to start <tt>mongod</tt>:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>sudo /etc/init.d/mongodb start
+</code></pre></div>
+
+<p>You can verify that <tt>mongod</tt> has started successfully by checking the contents of the log file at <tt>/var/log/mongodb/mongodb.log</tt></p>
+
+<h2 id="span-style-text-decoration-none-border-bottom1px-dashedstrongstopping-mongodbstrongspan"><span style="text-decoration: none; border-bottom:1px dashed;"><strong>Stopping MongoDB</strong></span></h2>
+
+<p>Upstart users can stop the <tt>mongod</tt> process by issuing the following command:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>sudo service mongodb stop
+</code></pre></div>
+
+<p>All other users can issue the following command to stop <tt>mongod</tt>:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>sudo /etc/init.d/mongodb stop
+</code></pre></div>
+
+<h2 id="span-style-text-decoration-none-border-bottom1px-dashedstrongrestarting-mongodbstrongspan"><span style="text-decoration: none; border-bottom:1px dashed;"><strong>Restarting MongoDB</strong></span></h2>
+
+<p>Upstart users can restart the <tt>mongod</tt> process by issuing the following command:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>sudo service mongodb restart
+</code></pre></div>
+
+<p>All other users can issue the following command to restart <tt>mongod</tt>:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>sudo /etc/init.d/mongodb restart
+</code></pre></div>
+
+<p>type “mongo” in your terminal to see the version</p>
+
+<h2 class="gray">Comments</h2>
+
+<div>
+<div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+<script type="text/javascript">
+  var disqus_shortname = 'sukendhar';
+  // var disqus_developer = 1;
+  var disqus_identifier = 'http://sukendharreddy.com/mongo-db-installation/';
+  var disqus_url = 'http://sukendharreddy.com/mongo-db-installation/';
+  var disqus_script = 'embed.js';
+  (function () {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+</script>
+
+
+  </div>
+
+</article>
 
     </div>
 

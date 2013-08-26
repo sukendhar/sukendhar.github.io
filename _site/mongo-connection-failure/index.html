@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />	<!-- Force Latest IE rendering engine -->
-    <title>Sukendhar's blog</title>
+    <title>Mongo connection failure?</title>
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -69,54 +69,70 @@
         </section>
       </div>
 
-      <ul id="posts" class="twelve columns offset-by-four">
+      <article class='ten columns offset-by-four' id="article-content">
+  <header class="ten columns" id="article-header">
+    <h1>Mongo connection failure?</h1>
+  </header>
+
+  <div class='ten columns gray' id="date-header">
+    <p>
+      16, September 2012
   
-    <li>
-      <a class="nine columns" href="/Rails-Upgrade-2.3.x-to-3.2.x">Rails upgrade 2.3.x to 3.2.x</a>
-      <span class="two columns">Jan 2013</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/Getting-started-with-git">Getting started with git</a>
-      <span class="two columns">Dec 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/mongo-db-quieries">Mongo DB Quieries</a>
-      <span class="two columns">Sep 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/mongo-connection-failure">Mongo connection failure?</a>
-      <span class="two columns">Sep 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/mongo-db-installation">Mongo DB installation</a>
-      <span class="two columns">Sep 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/contact-form-in-rails-3">Contact form in Rails 3</a>
-      <span class="two columns">Sep 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/difference-between-rails-2-3-and-3">Difference between Rails 2.3 and 3</a>
-      <span class="two columns">Sep 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/What-is-ruby-on-rails">What is Ruby on Rails?</a>
-      <span class="two columns">Aug 2012</span>
-    </li>
-  
-    <li>
-      <a class="nine columns" href="/hello-world">Hello world!</a>
-      <span class="two columns">Jul 2012</span>
-    </li>
-  
-</ul>
+    </p>
+
+  </div>
+
+  <div class="ten columns" id="article-content">
+    <p>Connection failed during mongo start:</p>
+
+<p>Follow this steps:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake rails:upgrade:backup
+</code></pre>
+</div>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>mongod --repair
+</code></pre>
+</div>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>sudo start mongodb
+</code></pre>
+</div>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>sudo status mongodb
+</code></pre>
+</div>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>mongo
+</code></pre>
+</div>
+
+<p>connection established message will be displayed.</p>
+
+<h2 class="gray">Comments</h2>
+
+<div>
+<div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+<script type="text/javascript">
+	var disqus_shortname = 'sukendhar';
+	// var disqus_developer = 1;
+	var disqus_identifier = 'http://sukendharreddy.com/mongo-connection-failure/';
+	var disqus_url = 'http://sukendharreddy.com/mongo-connection-failure/';
+	var disqus_script = 'embed.js';
+	(function () {
+	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+</script>
+
+
+  </div>
+
+</article>
 
     </div>
 
