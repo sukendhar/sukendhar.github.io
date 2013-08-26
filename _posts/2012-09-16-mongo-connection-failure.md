@@ -15,7 +15,7 @@ Connection failed during mongo start:
 
 Follow this steps:
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>rake rails:upgrade:backup
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>sudo rm /var/lib/mongodb/mongod.lock
 </code></pre>
 </div>
 
