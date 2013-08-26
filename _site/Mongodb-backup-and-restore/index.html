@@ -1,6 +1,158 @@
-<h2 id="mongodb-backup">MongoDB backup</h2>
-<p>To take backup of mongodb database
-    $ monogodb -db database_name &gt; database_name.bson</p>
+<!--  -->
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> 	
+<html lang="en"> 
+<!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />	<!-- Force Latest IE rendering engine -->
+    <title>Mongo backup and restore</title>
 
-<p>To restore backup file to database
-    $ mongorestore -db database_name folder_name</p>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href="http://feeds.feedburner.com/sukendhar" rel="alternate" title="Sukendhar" type="application/atom+xml" /> 
+    <link id="avatar" rel="shortcut icon" href="/static/images/favicon.jpg" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!--[if IE 7]>
+      <script src="/static/css/font-awesome-ie7.css"></script>
+    <![endif]-->
+  </head>
+  <body class="main_container">
+    <div class="container">	
+      <div id='mobile' class='two columns hidden'>
+        <a id="avatar" href="/"></a>
+
+          <ul id="me">
+            <li><span class="my_name">Sukendhar Reddy</span></li>
+            <!-- <li class="gray my_desc">Ruby on Rails developer</li> -->
+          </ul>
+
+          <table id="buttons unstyled">
+            <td><a href="http://github.com/sukendhar" rel="me" class="social github" title="I share and fork code here" target="_blank"></a></td>
+            <td><a href="http://www.linkedin.com/in/sukendharreddy" rel="me" class="social linkedin" title="Go to LinkedIn profile" target="_blank"></a></td>
+            <td><a href="http://www.twitter.com/sukendhar" rel="me" class="social twitter" title="You should follow me" target="_blank"></a></td>
+            <td><a href="http://feeds.feedburner.com/sukendhar" rel="me" class="social rss" title="Go to feedburner sukendhar rss feed" target="_blank"></a></td>
+            <td><a href="https://plus.google.com/109867123691878848659/posts" rel="me" class="social gplus" title="Go to Google Plus profile" target="_blank"></a></td> 
+            <td><a href="mailto:sukendhar555@gmail.com?subject=hi" rel="me" class="social mail" title="Say hi" target="_blank"></a></td>
+          </table>
+      </div>
+
+      <div class="four columns sidebar">
+        <section>
+          
+          <img src="../static/images/sukendhar.png" id="avatar">
+          <ul id="me">
+            <li><span class="my_name">Sukendhar Reddy</span></li>
+            <!-- <li class="gray my_desc">Ruby on Rails developer</li> -->
+          </ul>
+
+          <table id="buttons unstyled">
+            <td><a href="http://github.com/sukendhar" rel="me" class="social github" title="I share and fork code here" target="_blank"></a></td>
+            <td><a href="http://www.linkedin.com/in/sukendharreddy" rel="me" class="social linkedin" title="Go to LinkedIn profile" target="_blank"></a></td>
+            <td><a href="http://www.twitter.com/sukendhar" rel="me" class="social twitter" title="You should follow me" target="_blank"></a></td>
+            <td><a href="http://feeds.feedburner.com/sukendhar" rel="me" class="social rss" title="Go to feedburner sukendhar rss feed" target="_blank"></a></td>
+            <td><a href="https://plus.google.com/109867123691878848659/posts" rel="me" class="social gplus" title="Go to Google Plus profile" target="_blank"></a></td> 
+            <td><a href="mailto:sukendhar555@gmail.com?subject=hi" rel="me" class="social mail" title="Say hi" target="_blank"></a></td>
+          </table>
+
+        </section>
+      </div>
+
+      <article class='ten columns offset-by-four' id="article-content">
+  <header class="ten columns" id="article-header">
+    <h1>Mongo backup and restore</h1>
+  </header>
+
+  <div class='ten columns gray' id="date-header">
+    <p>
+      05, August 2013
+  
+    </p>
+
+  </div>
+
+  <div class="ten columns" id="article-content">
+    <h2 id="span-style-text-decoration-none-border-bottom1px-dashedmongodb-backup--restorespan"><span style="text-decoration: none; border-bottom:1px dashed;"><strong>MongoDB backup &amp; Restore</strong></span></h2>
+<p>To take backup of mongodb database</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>monogodb -db database_name &gt; database_name.bson
+</code></pre>
+</div>
+
+<p>To restore backup file to database</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>mongorestore -db database_name folder_name
+</code></pre>
+</div>
+
+<p>Take backup from heroku MongoHQ using heroku-mongo-sync</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>heroku mongo:pull --app app_name
+</code></pre>
+</div>
+
+<p>Take backup from heroku MongoHQ from MongoHQ url</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>mongodump -h hatch.mongohq.com:27021 -d database_name -u admin -p sekret -o ~/tmp/mongodump
+</code></pre>
+</div>
+
+<p>Restore heroku MongoHQ database with backup </p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>mongorestore -h hatch.mongohq.com:27021 -d database_name -u admin -p sekret ~/tmp/mongodump/database_name
+</code></pre>
+</div>
+
+<h2 class="gray">Comments</h2>
+
+<div>
+<div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+<script type="text/javascript">
+  var disqus_shortname = 'sukendhar';
+  // var disqus_developer = 1;
+  var disqus_identifier = 'http://sukendharreddy.com/Mongodb-backup-and-restore/';
+  var disqus_url = 'http://sukendharreddy.com/Mongodb-backup-and-restore/';
+  var disqus_script = 'embed.js';
+  (function () {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+</script>
+
+
+  </div>
+
+</article>
+
+    </div>
+
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37000106-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html> 

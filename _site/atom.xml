@@ -4,7 +4,7 @@
  <title>Sukendhar</title>
  <link href="http://sukendhar.github.com/atom.xml" rel="self"/>
  <link href="http://sukendhar.github.com/"/>
- <updated>2013-08-26T22:53:36+05:30</updated>
+ <updated>2013-08-26T23:10:07+05:30</updated>
  <id>http://sukendhar.github.com</id>
  <author>
    <name>Sukendhar</name>
@@ -13,16 +13,61 @@
 
  
  <entry>
-   <title>Mongodb Backup And Restore</title>
+   <title>Mongo backup and restore</title>
    <link href="http://sukendhar.github.com/Mongodb-backup-and-restore"/>
    <updated>2013-08-05T00:00:00+05:30</updated>
    <id>http:/sukendhar.github.com/Mongodb-backup-and-restore</id>
-   <content type="html">&lt;h2 id=&quot;mongodb-backup&quot;&gt;MongoDB backup&lt;/h2&gt;
-&lt;p&gt;To take backup of mongodb database
-    $ monogodb -db database_name &amp;gt; database_name.bson&lt;/p&gt;
+   <content type="html">&lt;h2 id=&quot;span-style-text-decoration-none-border-bottom1px-dashedmongodb-backup--restorespan&quot;&gt;&lt;span style=&quot;text-decoration: none; border-bottom:1px dashed;&quot;&gt;&lt;strong&gt;MongoDB backup &amp;amp; Restore&lt;/strong&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;To take backup of mongodb database&lt;/p&gt;
 
-&lt;p&gt;To restore backup file to database
-    $ mongorestore -db database_name folder_name&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;monogodb -db database_name &amp;gt; database_name.bson
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To restore backup file to database&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mongorestore -db database_name folder_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Take backup from heroku MongoHQ using heroku-mongo-sync&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;heroku mongo:pull --app app_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Take backup from heroku MongoHQ from MongoHQ url&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mongodump -h hatch.mongohq.com:27021 -d database_name -u admin -p sekret -o ~/tmp/mongodump
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Restore heroku MongoHQ database with backup &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mongorestore -h hatch.mongohq.com:27021 -d database_name -u admin -p sekret ~/tmp/mongodump/database_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 class=&quot;gray&quot;&gt;Comments&lt;/h2&gt;
+
+&lt;div&gt;
+&lt;div id=&quot;disqus_thread&quot; aria-live=&quot;polite&quot;&gt;&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var disqus_shortname = 'sukendhar';
+  // var disqus_developer = 1;
+  var disqus_identifier = 'http://sukendharreddy.com/Mongodb-backup-and-restore/';
+  var disqus_url = 'http://sukendharreddy.com/Mongodb-backup-and-restore/';
+  var disqus_script = 'embed.js';
+  (function () {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+&lt;/script&gt;
+
 </content>
  </entry>
  
