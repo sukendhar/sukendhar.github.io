@@ -1,4 +1,4 @@
-# Sukendhar.com
+# Sukendharreddy.com
 
 My personal website and blog.
 
