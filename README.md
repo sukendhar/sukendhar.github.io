@@ -1,4 +1,4 @@
-# Sukendharreddy.com
+# Sukendhar.github.io
 
 My personal website and blog.
 
